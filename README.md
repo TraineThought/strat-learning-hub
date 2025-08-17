@@ -1,54 +1,94 @@
-# Strat Learning Hub 📈
+# Strat Learning Hub
 
-A simple learning hub for the **TheStrat trading strategy**.  
-This project provides tutorials, charts, videos, and downloadable resources with light/dark mode support.  
+**Strat Learning Hub** is a beginner-friendly resource to learn the basics of **TheStrat** trading strategy.  
+It combines tutorials, interactive charts, videos, and downloadable PDFs into one streamlined site.
+
+🌐 **Live Demo**: [trainethought.github.io](https://trainethought.github.io/strat-learning-hub/)
 
 ---
 
-## 🚀 Features
-- 📚 **Tutorials** on TheStrat basics, candlesticks, and price action  
-- 📊 **Charts** with key formations and examples  
-- 🎥 **Videos** with play/pause/close functionality  
-- 📑 **Downloadable PDFs** (Options Greeks, Options Trading Guides, etc.)  
-- 🌗 **Light/Dark mode toggle** for better readability  
+## 📚 Features
+
+- **Tutorials Section**  
+  Expandable lessons introducing TheStrat concepts, candlestick basics, scenarios, and price action.
+
+- **Interactive Charts**  
+  Filter by tag, search by name/description, and view charts in a **lightbox** with keyboard navigation.
+
+- **Video Library**  
+  Curated YouTube resources (autoplay embeds, one-at-a-time playback, and playlist support).
+
+- **Downloads**  
+  PDF guides, cheat sheets, and reference material.  
+  - Files are auto-listed from `/files/index.json`  
+  - Includes graceful fallback if JSON fails to load.
+
+- **Dark/Light Mode**  
+  Toggle with localStorage persistence.
+
+- **Mobile-Friendly UI**  
+  Responsive layout optimized for small screens. Smooth scroll + section highlighting in nav.
+
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5 / CSS3 / Vanilla JavaScript**
+- **JSON** for PDF manifest
+- **GitHub Pages** for hosting
 
 ---
 
 ## 📂 Project Structure
-strat-learning-hub/
-│── index.html        # Main HTML page
-│── styles.css        # Styles (light + dark mode)
-│── script.js         # Interactive functionality
-│── README.md         # Project documentation
-│── /images           # Charts, candlestick patterns, setups
-│── /files            # Downloadable PDFs
+
+├── index.html          # Main entry page
+├── style.css           # Stylesheet
+├── script.js           # All interactive logic
+├── files/              # PDF files + index.json manifest
+│   ├── index.json
+│   ├── thestrat-guide.pdf
+│   └── …
+├── img/                # Images used in charts/tutorials
+└── README.md           # Project documentation
 
 ---
 
-## 📖 Getting Started
-### Option 1: Open Locally
-1. Clone or download this repo.
-2. Open `index.html` in your browser.
+## 🚀 Getting Started
 
-### Option 2: Run with Localhost
-For full functionality (like dynamic JSON loading), run with a local server:
-```bash
-# If you have Python installed
-python3 -m http.server
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/<your-username>/<your-repo>.git
+   cd <your-repo>
 
-Then visit: http://localhost:8000
+2.	Serve locally (optional)
+Open index.html directly in your browser or run a local server:
 
-Live Demo
-👉 (https://trainethought.github.io/strat-learning-hub/)
+python -m http.server 8000
 
-⸻
 
-🛠️ Built With
-	•	HTML5
-	•	CSS3
-	•	JavaScript
+3.	Deploy
+	•	Push changes to your main branch
+	•	GitHub Pages automatically serves from /
+	•	Accessible at https://<your-username>.github.io/<your-repo>
 
 ⸻
 
-👤 Author
-Built by Kane Adams
+📖 How It Works
+	•	Tutorials: Each item has a toggle button (Read More / Hide).
+	•	Charts: Filtered via chips + search input. Count auto-updates.
+	•	Lightbox: Supports next/prev, keyboard arrows, and ESC to close.
+	•	Videos: Only one video plays at a time. Stops when section leaves viewport.
+	•	PDFs: Loaded dynamically from files/index.json. Sorted alphabetically.
+
+⸻
+
+🤝 Contributing
+
+Contributions, suggestions, or fixes are welcome!
+Feel free to open an issue or submit a pull request.
+
+⸻
+
+📜 License
+
+This project is licensed under the MIT License – free to use, modify, and share.
