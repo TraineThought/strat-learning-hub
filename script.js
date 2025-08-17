@@ -9,6 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Expand/Collapse Tutorials
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".toggle-btn");
+    if (!btn) return;
+    const content = btn.nextElementSibling;
+    if (!content) return;
+
+    content.classList.toggle("active");
+    btn.textContent = content.classList.contains("active") ? "Hide" : "Read More";
+  });
+
   // Theme Toggle (with responsive labels)
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
