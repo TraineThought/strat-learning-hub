@@ -630,9 +630,38 @@ footer {
 
 /* Responsive */
 @media (max-width: 600px) {
+
+  nav {
+    background: transparent;
+    padding: 0;
+  }
   nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    justify-content: stretch;
+  }
+  nav a {
+    display: block;
+    background: #eaf2ff;
+    color: #0b5ed7;
+    border-radius: 0.6rem;
+    padding: 0.6rem 0.9rem;
+    text-decoration: none;
+  }
+  nav a:hover { color: #0b5ed7; }
+  nav a:active {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+  }
+
+  #theme-toggle {
+    position: fixed; /* stays visible while scrolling */
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 999px;
+    z-index: 1001;
   }
 
   header h1 {

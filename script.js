@@ -9,31 +9,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Theme Toggle
+  // Theme Toggle (with responsive labels)
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
 
+function updateThemeToggleLabel() {
+  const small = window.matchMedia("(max-width: 600px)").matches;
+  const isDark = body.classList.contains("dark-mode");
+  themeToggle.textContent = isDark
+    ? (small ? "☀️" : "☀️ Light Mode")
+    : (small ? "🌙" : "🌙 Dark Mode");
+  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+}
+
+  // Initialize theme from localStorage
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-mode");
-    if (themeToggle) themeToggle.textContent = "☀️ Light Mode";
   }
+updateThemeToggleLabel();
 
+  // Click listener
   themeToggle?.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
-    const isDark = body.classList.contains("dark-mode");
-    themeToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    updateThemeToggleLabel();
   });
 
-  // Expand/Collapse Tutorials
-  const toggles = document.querySelectorAll(".toggle-btn");
-  toggles.forEach(button => {
-    button.addEventListener("click", () => {
-      const content = button.nextElementSibling;
-      content?.classList.toggle("active");
-      button.textContent = content?.classList.contains("active") ? "Hide" : "Read More";
-    });
-  });
+  // Update label on resize too
+  window.addEventListener("resize", updateThemeToggleLabel);
 
   // Charts: filter chips + search + count
   const chips = document.querySelectorAll(".chart-toolbar .chip");
