@@ -41,14 +41,14 @@ It combines tutorials, interactive charts, videos, and downloadable PDFs into on
 
 ## 📂 Project Structure
 
-├── index.html          # Main entry page
-├── style.css           # Stylesheet
-├── script.js           # All interactive logic
-├── files/              # PDF files + index.json manifest
-│   ├── index.json
-│   ├── thestrat-guide.pdf
-│   └── …
-├── img/                # Images used in charts/tutorials
+├── index.html          # Main entry page <br>
+├── style.css           # Stylesheet <br>
+├── script.js           # All interactive logic <br>
+├── files/              # PDF files + index.json manifest <br>
+│   ├── index.json <br>
+│   ├── thestrat-guide.pdf <br>
+│   └── … <br>
+├── img/                # Images used in charts/tutorials <br>
 └── README.md           # Project documentation
 
 ---
@@ -73,11 +73,11 @@ python -m http.server 8000
 
 ⸻
 
-📖 How It Works
-• Tutorials: Each item has a toggle button (Read More / Hide).
-• Charts: Filtered via chips + search input. Count auto-updates.
-• Lightbox: Supports next/prev, keyboard arrows, and ESC to close.
-• Videos: Only one video plays at a time. Stops when section leaves viewport.
+📖 How It Works <br>
+• Tutorials: Each item has a toggle button (Read More / Hide).<br>
+• Charts: Filtered via chips + search input. Count auto-updates.<br>
+• Lightbox: Supports next/prev, keyboard arrows, and ESC to close.<br>
+• Videos: Only one video plays at a time. Stops when section leaves viewport.<br>
 • PDFs: Loaded dynamically from files/index.json. Sorted alphabetically.
 
 ⸻
