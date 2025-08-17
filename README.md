@@ -67,18 +67,18 @@ python -m http.server 8000
 
 
 3.	Deploy
-	•	Push changes to your main branch
-	•	GitHub Pages automatically serves from /
-	•	Accessible at https://<your-username>.github.io/<your-repo>
+• Push changes to your main branch
+• GitHub Pages automatically serves from /
+• Accessible at https://<your-username>.github.io/<your-repo>
 
 ⸻
 
 📖 How It Works
-	•	Tutorials: Each item has a toggle button (Read More / Hide).
-	•	Charts: Filtered via chips + search input. Count auto-updates.
-	•	Lightbox: Supports next/prev, keyboard arrows, and ESC to close.
-	•	Videos: Only one video plays at a time. Stops when section leaves viewport.
-	•	PDFs: Loaded dynamically from files/index.json. Sorted alphabetically.
+• Tutorials: Each item has a toggle button (Read More / Hide).
+• Charts: Filtered via chips + search input. Count auto-updates.
+• Lightbox: Supports next/prev, keyboard arrows, and ESC to close.
+• Videos: Only one video plays at a time. Stops when section leaves viewport.
+• PDFs: Loaded dynamically from files/index.json. Sorted alphabetically.
 
 ⸻
 
