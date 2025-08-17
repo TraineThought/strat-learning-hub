@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strat Learning Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Strat Learning Hub</h1>
+    <p class="tagline">Learn the basics of TheStrat trading strategy</p>
+  </header>
+
+  <nav>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+    <ul>
+      <li><a href="#tutorials">Tutorials</a></li>
+      <li><a href="#charts">Charts</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#downloads">Downloads</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="tutorials">
+  <h2>📘 Tutorials</h2>
+  <div class="content-block">
+    <p>Learn about timeframes, reversals, and actionable signals.</p>
+
+    <!-- 1. What is TheStrat? -->
+    <div class="tutorial-card" id="tut-what-is">
+      <h3>1. What is TheStrat?</h3>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="tut-what-is-content">Read More</button>
+      <div class="tutorial-content" id="tut-what-is-content">
+        <p>
+          TheStrat is a price-action trading framework developed by Rob Smith. It simplifies price into three scenarios:
+          inside bars (1), directional bars (2), and outside bars (3). You combine these with multiple-timeframe analysis
+          to confirm bias and find high-probability entries.
+        </p>
+        <p>
+          The approach is consistent and rules-based—great for scalps, day trades, or swings—on any timeframe.
+        </p>
+        <figure>
+          <img src="img/thestrat-first-img.jpg" alt="TheStrat opening slide with quote" class="tutorial-img" />
+          <figcaption class="img-caption">“We don’t think, we know…” — Rob Smith</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- 2. Candlestick Overview -->
+    <div class="tutorial-card" id="tut-candles">
+      <h3>2. Candlestick Overview</h3>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="tut-candles-content">Read More</button>
+      <div class="tutorial-content" id="tut-candles-content">
+        <p>Before you begin, you need the basics. Candlesticks have five key parts:</p>
+
+        <figure>
+          <img src="img/candlestick-overview.jpg" alt="Anatomy of a candlestick" class="tutorial-img" />
+          <figcaption class="img-caption">Sample of Candlestick Overview</figcaption>
+        </figure>
+
+        <p><strong>WICKS</strong><br>
+        1 — Top wick / high: the highest price during the candle’s timeframe.<br>
+        2 — Bottom wick / low: the lowest price during the candle’s timeframe.</p>
+
+        <p><strong>FILL (Body)</strong><br>
+        3 — Open: the price at the start of the timeframe (top or bottom of the body depending on color).<br>
+        4 — Close: the price at the end of the timeframe (top or bottom of the body depending on color).<br>
+        5 — Color: <em>Green/Hollow</em> = open below close → price up. <em>Red/Full</em> = open above close → price down.</p>
+      </div>
+    </div>
+
+    <!-- 3. Scenarios and Price Action -->
+    <div class="tutorial-card" id="tut-scenarios">
+      <h3>3. Scenarios and Price Action</h3>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="tut-scenarios-content">Read More</button>
+      <div class="tutorial-content" id="tut-scenarios-content">
+        <p><strong>Scenario 1: Inside Bar (1)</strong><br>
+        Current candle is fully inside the prior candle’s range → balance/equilibrium. Wait for a directional break before entering.</p>
+        <figure>
+          <img src="img/scenario-one-bar.jpg" alt="Inside bar example" class="tutorial-img" />
+          <figcaption class="img-caption">Scenario 1 — Consolidation inside prior range</figcaption>
+        </figure>
+
+        <p><strong>Scenario 2: Directional Bar (2)</strong><br>
+        <em>2 Down</em>: takes out the previous low only. <em>2 Up</em>: takes out the previous high only. Trade 2s with continuation in the same direction.</p>
+        <figure>
+          <img src="img/scenario-two-down.jpg" alt="2 Down directional example" class="tutorial-img" />
+          <figcaption class="img-caption">Scenario 2 Down — Takes out previous low</figcaption>
+        </figure>
+        <figure>
+          <img src="img/scenario-two-up.jpg" alt="2 Up directional example" class="tutorial-img" />
+          <figcaption class="img-caption">Scenario 2 Up — Takes out previous high</figcaption>
+        </figure>
+
+        <p><strong>Scenario 3: Outside Bar (3)</strong><br>
+        Takes out both sides of the prior bar. Look for confirmation and direction on your trigger timeframe before trading.</p>
+        <figure>
+          <img src="img/scenario-three-bar.jpg" alt="Outside bar example" class="tutorial-img" />
+          <figcaption class="img-caption">Scenario 3 — Takes out both prior high and low</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- 4. Timeframe Continuity & Broadening Formations -->
+    <div class="tutorial-card" id="tut-ftfc-bf">
+      <h3>4. Timeframe Continuity & Broadening Formations</h3>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="tut-ftfc-bf-content">Read More</button>
+      <div class="tutorial-content" id="tut-ftfc-bf-content">
+        <p><strong>Timeframe Continuity (TFC/FTFC):</strong> When higher and lower timeframes align in the same direction, probability improves and bias is clearer.</p>
+
+        <figure>
+          <img src="img/ftfc-up.PNG" alt="Full timeframe continuity up example" class="tutorial-img" />
+          <figcaption class="img-caption">Full Timeframe Continuity — Upside</figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/ftfc-down.PNG" alt="Full timeframe continuity down example" class="tutorial-img" />
+          <figcaption class="img-caption">Full Timeframe Continuity — Downside</figcaption>
+        </figure>
+
+        <p><strong>Broadening Formations (BF):</strong> A series of higher highs and lower lows over time — the range “broadens.” Draw on any timeframe to spot exhaustion and reversals.</p>
+        <figure>
+          <img src="img/broad-formation-example.jpg" alt="Broadening formation drawing example" class="tutorial-img" />
+          <figcaption class="img-caption">Drawing a Broadening Formation</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- 5. Actionable Signals -->
+    <div class="tutorial-card" id="tut-signals">
+      <h3>5. Actionable Signals: Hammer, Shooter, Inside Bars</h3>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="tut-signals-content">Read More</button>
+      <div class="tutorial-content" id="tut-signals-content">
+        <p><strong>Hammer:</strong> Bullish reversal — long lower wick, close near highs.</p>
+        <figure>
+          <img src="img/hammer-candlestick.JPG" alt="Hammer candlestick example" class="tutorial-img" />
+          <figcaption class="img-caption">Hammer — buyers in control into the close</figcaption>
+        </figure>
+
+        <p><strong>Shooter:</strong> Bearish reversal — long upper wick, close near lows.</p>
+        <figure>
+          <img src="img/shooter-candlestick.JPG" alt="Shooter candlestick example" class="tutorial-img" />
+          <figcaption class="img-caption">Shooter — sellers in control into the close</figcaption>
+        </figure>
+
+        <p><strong>Inside Bar:</strong> Covered in Scenario 1 — balance. Trade the break with confirmation.</p>
+        <figure>
+          <img src="img/scenario-one-bar.jpg" alt="Inside bar signal example" class="tutorial-img" />
+          <figcaption class="img-caption">Inside Bar — let it resolve, then trigger</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- 6. Strat Setups -->
+    <div class="tutorial-card" id="tut-setups">
+      <h3>6. Strat Setups</h3>
+      <button class="toggle-btn" aria-expanded="false" aria-controls="tut-setups-content">Read More</button>
+      <div class="tutorial-content" id="tut-setups-content">
+        <p>
+          Focus on a small set of clean patterns and trade them with timeframe continuity. Enter on reversals, add on continuations.
+        </p>
+        <figure>
+          <img src="img/strat-setups.PNG" alt="Common Strat setups overview" class="tutorial-img" />
+          <figcaption class="img-caption">Common Strat setups you’ll see often</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="charts">
+<h2>📊 Chart Examples</h2>
+
+<div class="chart-toolbar" aria-label="Chart filters">
+<div class="chip-row" role="group" aria-label="Tag filters">
+  <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+  <button class="chip" data-filter="ftfc" aria-pressed="false">FTFC</button>
+  <button class="chip" data-filter="bf" aria-pressed="false">Broadening</button>
+  <button class="chip" data-filter="setups" aria-pressed="false">Setups</button>
+</div>
+
+<div class="chart-search">
+  <input id="chartSearch" type="search" placeholder="Search captions…" aria-label="Search chart captions">
+  <span id="chartCount" class="chart-count" aria-live="polite"></span>
+</div>
+</div>
+
+<!-- Gallery -->
+<div class="chart-gallery" id="chartGallery">
+<!-- FTFC -->
+<figure class="chart-card" data-tags="ftfc">
+  <img
+    src="img/charts/bear-FTFC.jpg"
+    data-full="img/charts/bear-FTFC.jpg"
+    alt="Bearish FTFC downside"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open Bearish FTFC downside preview"
+  />
+  <figcaption>Example of a Bearish Full Timeframe Continuity to the downside</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="ftfc">
+  <img
+    src="img/charts/bullish-FTFC.jpg"
+    data-full="img/charts/bullish-FTFC.jpg"
+    alt="Bullish FTFC upside"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open Bullish FTFC upside preview"
+  />
+  <figcaption>Example of a Bullish Full Timeframe Continuity to the upside</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="ftfc">
+  <img
+    src="img/charts/TFC-explain.jpg"
+    data-full="img/charts/TFC-explain.jpg"
+    alt="General explanation of Timeframe Continuity"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Timeframe Continuity explained preview"
+  />
+  <figcaption>Timeframe Continuity explained in general terms</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="ftfc">
+  <img
+    src="img/charts/TFC-high-TF.jpg"
+    data-full="img/charts/TFC-high-TF.jpg"
+    alt="Identifying trends on Higher Timeframe"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Identifying trends on Higher Timeframe preview"
+  />
+  <figcaption>Identifying the trend on Higher Timeframes</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="ftfc">
+  <img
+    src="img/charts/not-aligned-FTFC.jpg"
+    data-full="img/charts/not-aligned-FTFC.jpg"
+    alt="Timeframe continuity not aligned"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open not-aligned FTFC preview"
+  />
+  <figcaption>Example of Timeframe Continuity not aligned. Avoid trading this.</figcaption>
+</figure>
+
+<!-- Broadening Formations -->
+<figure class="chart-card" data-tags="bf">
+  <img
+    src="img/charts/BF-Rob-Smith.PNG"
+    data-full="img/charts/BF-Rob-Smith.PNG"
+    alt="Broadening Formation shown by Rob Smith"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open Broadening Formation by Rob Smith preview"
+  />
+  <figcaption>Broadening Formation shown by Rob Smith</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="bf">
+  <img
+    src="img/charts/ES-m30-BF.PNG"
+    data-full="img/charts/ES-m30-BF.PNG"
+    alt="Broadening Formation drawn on 30-minute timeframe for ES"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open ES 30-minute Broadening Formation preview"
+  />
+  <figcaption>Broadening Formation drawn on the 30-minute timeframe for ES</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="bf">
+  <img
+    src="img/charts/DIS-BF-Daily.jpeg"
+    data-full="img/charts/DIS-BF-Daily.jpeg"
+    alt="Broadening Formation drawn on Daily timeframe for $DIS"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Broadening Formation drawn on Daily timeframe for $DIS preview"
+  />
+  <figcaption>Broadening Formation drawn on Daily timeframe for $DIS</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="bf">
+  <img
+    src="img/charts/META-BF-W.jpeg"
+    data-full="img/charts/META-BF-W.jpeg"
+    alt="Broadening Formation drawn on Weekly timeframe for $META"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Broadening Formation drawn on Weekly timeframe for $META preview"
+  />
+  <figcaption>Broadening Formation drawn on Weekly timeframe for $META</figcaption>
+</figure>
+
+<!-- Setups -->
+<figure class="chart-card" data-tags="setups">
+  <img
+    src="img/charts/uber-212-D-cont-example.PNG"
+    data-full="img/charts/uber-212-D-cont-example.PNG"
+    alt="Uber 2u-1-2u Continuation on the Daily timeframe"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open Uber 2u-1-2u Daily preview"
+  />
+  <figcaption>Uber 2u-1-2u Continuation on the Daily timeframe</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="setups">
+  <img
+    src="img/charts/uber-212-D-cont-1H.PNG"
+    data-full="img/charts/uber-212-D-cont-1H.PNG"
+    alt="Uber 2u-1-2u Continuation on a 1H timeframe"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open Uber 2u-1-2u 1H preview"
+  />
+  <figcaption>Uber 2u-1-2u Continuation on a 1H timeframe</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="setups">
+  <img
+    src="img/charts/HOOD-322-Daily.PNG"
+    data-full="img/charts/HOOD-322-Daily.PNG"
+    alt="HOOD 3-2d-2u Reversal on the Daily timeframe"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open HOOD 3-2d-2u Daily preview"
+  />
+  <figcaption>HOOD 3-2d-2u Reversal on the Daily timeframe</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="setups">
+  <img
+    src="img/charts/HOOD-322-m30.PNG"
+    data-full="img/charts/HOOD-322-m15.PNG"
+    alt="HOOD 3-2d-2u Reversal on the 30-minute timeframe"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="Open HOOD 3-2d-2u 30-minute preview"
+  />
+  <figcaption>HOOD 3-2d-2u Reversal on the 30-minute timeframe</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="setups">
+  <img
+    src="img/charts/RJ-222-Daily.PNG"
+    data-full="img/charts/RJ-222-Daily.PNG"
+    alt="RJ 222 Reversal on the Daily timeframe"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="RJ 222 Reversal Daily timeframe preview"
+  />
+  <figcaption>Randy Jackson 2-2-2 Reversal on the Daily timeframe for $SOFI</figcaption>
+</figure>
+
+<figure class="chart-card" data-tags="setups">
+  <img
+    src="img/charts/RJ-222-m30.PNG"
+    data-full="img/charts/RJ-222-m30.PNG"
+    alt="RJ 222 Reversal on the 30 min timeframe"
+    loading="lazy"
+    width="720" height="480"
+    tabindex="0" role="button" aria-label="RJ 222 Reversal on the 30 min preview"
+  />
+  <figcaption>Randy Jackson 2-2-2 Reversal on the 30 min timeframe for $SOFI</figcaption>
+</figure>
+
+</div>
+
+    <!-- Lightbox modal -->
+<div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Chart preview">
+  <button class="lightbox-close" aria-label="Close preview">×</button>
+
+  <div class="lightbox-stage" role="group" aria-label="Image navigation">
+    <button class="lightbox-prev" aria-label="Previous image">‹</button>
+    <img id="lightboxImg" alt="">
+    <button class="lightbox-next" aria-label="Next image">›</button>
+  </div>
+
+    <p id="lightboxCaption" class="lightbox-caption"></p>
+</div>
+</section>
+
+    <section id="videos">
+      <h2>🎥 Video Walkthroughs</h2>
+      <div class="video-grid" id="videoGrid" aria-live="polite"></div>
+    </section>
+
+    <section id="downloads">
+      <h2>📄 Downloadable PDFs</h2>
+      <div id="pdfGrid" class="pdf-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Strat Learning Hub. Built by Kane Adams.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

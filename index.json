@@ -1,0 +1,8 @@
+[
+  { "file": "THESTRAT-Guide.pdf", "title": "TheStrat Guide", "desc": "A guide explaining TheStrat concepts, setups and scenarios." },
+  { "file": "Scenario-1.pdf", "title": "Scenario 1", "desc": "More information about the Scenario 1: Inside bar." },
+  { "file": "Scenario-2.pdf", "title": "Scenario 2", "desc": "More information about the Scenario 2: Directional bar." },
+  { "file": "Scenario-3.pdf", "title": "Scenario 3", "desc": "More information about the Scenario 3: Outside bar." },
+  { "file": "Options-Greeks-Made-Simple.pdf", "title": "Options Greeks Made Simple", "desc": "A brief explanation about Options Greeks." },
+  { "file": "10-days-to-successful-options-trading.pdf", "title": "10 Days to Successful Options Trading", "desc": "A more in-depth guide to trading options successfully." }
+]
